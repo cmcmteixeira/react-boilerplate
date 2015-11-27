@@ -2,7 +2,7 @@
 var baseConfig = require("./webpack.config.js");
 baseConfig.output.pathInfo = true;
 baseConfig.debug = true;
-baseConfig.cache = false;
+baseConfig.cache = true;
 baseConfig.devtool=  'eval-cheap-module-source-map';
 baseConfig.devServer = {
     contentBase: './tmp',

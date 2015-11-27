@@ -11,3 +11,9 @@ The current project was tested and developed using NodeJs v4.2.2
 
 
 #### Testing
+
+
+#### Considerations / Practices 
+As you can see 
+
+
