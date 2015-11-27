@@ -1,5 +1,5 @@
 import React from 'react/addons'
-var __path__ = '../../src/components/HelloWorld/HelloWorld.js';
+var __path__ = '../../../src/components/HelloWorld/HelloWorld.js';
 jest.dontMock(__path__);
 
 describe('HelloWorld', function() {
