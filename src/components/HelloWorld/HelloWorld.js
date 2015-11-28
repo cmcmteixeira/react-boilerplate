@@ -1,5 +1,6 @@
 import React from "react";
-import './HelloWorld.scss'
+import "./HelloWorld.scss";
+
 class HelloWorld extends React.Component {
     render(){
         return <div className="vo-reactEnv-helloWorld">
