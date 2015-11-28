@@ -1,24 +1,24 @@
-The current project was tested and developed using NodeJs v4.2.2 
+#### ATENTION: The current project was tested and developed using NodeJs v4.2.2 
 
-#### Getting Started
+## Getting Started
+
+#### Dependencies
 > npm install -g webpack
->
+
+> npm install -g webpack-dev-server
+
+> npm install 
+
+#### Building
 > npm run build
 
-
-#### Getting Started - Development
-> npm install webpack-dev-server -g
-
-> npm install
-
+#### Running webpack-dev-server
 > npm run dev-server
 
-
-#### Testing
-
+#### Running Tests
 > npm test
 
-#### Considerations / Practices 
+
 
 
 
