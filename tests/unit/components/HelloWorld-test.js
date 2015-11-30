@@ -11,6 +11,5 @@ describe('HelloWorld', () => {
         var element = TestUtils.findRenderedDOMComponentWithClass(Component, 'vo-reactEnv-helloWorld');
         expect(element).toBeDefined();
         expect(element.getDOMNode().innerHTML).toMatch(/Hello World/g);
-
     });
 });

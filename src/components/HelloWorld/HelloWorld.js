@@ -6,11 +6,10 @@ class HelloWorld extends React.Component {
     constructor(){
         super();
     }
-
-
     render(){
         return <div className="vo-reactEnv-helloWorld">
             <h1>Hello World</h1>
+
         </div>
     }
 }

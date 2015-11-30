@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --progress --profile --colors",
+    "build": "webpack --progress --profile --colors --optimize-minimize --optimize-dedupe -p",
     "test": "jest",
+    "dev": "jest && webpack-dev-server --config webpack.config.dev.js --hot --inline --colors",
     "dev-server": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors"
   },
   "author": "",
