@@ -2,6 +2,7 @@ import React from "react";
 import "./HelloWorld.scss";
 
 class HelloWorld extends React.Component {
+
     constructor(){
         super();
         this.state = {
@@ -9,12 +10,15 @@ class HelloWorld extends React.Component {
             punctuation: ""
         }
     }
+
     handleChange(event) {
         this.setState({salutation: event.target.value || 'Hello World'});
     }
+
     handleChangePunctuation(event){
         this.setState({punctuation: event.target.value || ''});
     }
+
     render(){
         return <div className="reactEnv-helloWorld">
             <h1>{this.state.salutation} {this.state.punctuation}</h1>
@@ -37,10 +41,7 @@ class HelloWorld extends React.Component {
                     onChange={this.handleChangePunctuation.bind(this)}
                     />
             </div>
-
-
         </div>
     }
 }
-
 export default HelloWorld;
