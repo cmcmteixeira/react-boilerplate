@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --progress --profile --colors --optimize-minimize --optimize-dedupe -p",
     "test": "jest --verbose",
-    "dev": "jest --verbose && webpack-dev-server --config webpack.config.dev.js --hot --inline --colors",
+    "test:watch": "jest --verbose --watch",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --hot --inline --colors",
     "dev-server": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors"
   },
   "author": "",
@@ -30,6 +31,9 @@
   },
   "dependencies": {
     "babel-runtime": "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.2.0.tgz",
+    "bluebird": "^3.0.5",
+    "fluxible": "^1.0.3",
+    "fluxible-addons-react": "^0.2.0",
     "react": "https://registry.npmjs.org/react/-/react-0.14.3.tgz",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
