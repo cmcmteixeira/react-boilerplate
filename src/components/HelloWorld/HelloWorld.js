@@ -14,28 +14,28 @@ class HelloWorld extends React.Component {
 
     constructor(props,context){
         super(props,context);
-        console.log(this);
-        this.state = {
-            punctuation: "!!!",
-            salutation: "Hello World"
-        };
-
+        this.state = this.getStoreState();
     }
 
 
     handleChange(event) {
         let salutation = event.target.value || 'Hello World';
-        console.log(this);
-        this.context.executeAction(HelloAction,salutation);
-        this.setState({salutation});
+        this.context.executeAction(HelloAction.SalutationChanged,salutation);
     }
 
     handleChangePunctuation(event){
-        console.log(this);
         let punctuation = event.target.value || '';
-        this.context.executeAction(HelloAction,punctuation);
-        this.setState({punctuation});
+        this.context.executeAction(HelloAction.PunctuationChanged,punctuation);
     }
+
+    getStoreState () {
+        return this.context.getStore(HelloStore).getState()
+    }
+
+    _onStoreChange () {
+        this.setState(this.getStoreState());
+    }
+
 
     render(){
         return <div className="reactEnv-helloWorld">

@@ -3,28 +3,36 @@
 import {BaseStore}  from 'fluxible/addons';
 
 var ACTIONS = {
-    HELLO : 'HELLO_ACTION'
+    HELLO : 'HELLO_ACTION',
+    SET_SALUTATION : 'SET_SALUTATION',
+    SET_PUNCTUATION: 'SET_PUNCTUATION'
 };
 
 class HelloStore extends BaseStore{
     constructor(dispatcher){
         super(dispatcher);
-        var key = ACTIONS.HELLO;
-        this.handlers = {
-            HELLO_ACTION : '_handleHelloAction'
+
+        this.state = {
+            salutation : "Hello World",
+            punctuation: "!!"
         };
     }
 
-    _handleHelloAction(){
-        console.log("Handling stuff");
+
+    _handleSetPunctuation(payload){
+        console.log("Handling-punctuation");
+        this.state.punctuation = payload;
+        this.emit('change')
     }
 
+    _handleSetSalutation(payload){
+        console.log("Handling-salutation");
+        this.state.salutation = payload;
+        this.emit('change')
+    }
 
     getState(){
-        return {
-            salutation : "Hello World",
-            punctuation: ""
-        };
+        return this.state;
     }
 
     dehydrate(){
@@ -38,5 +46,8 @@ class HelloStore extends BaseStore{
 
 HelloStore.storeName = "HelloStore";
 HelloStore.ACTIONS = ACTIONS;
-
+HelloStore.handlers = {
+    SET_SALUTATION   :'_handleSetSalutation',
+    SET_PUNCTUATION :'_handleSetPunctuation'
+};
 export default HelloStore;

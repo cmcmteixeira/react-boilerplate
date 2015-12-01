@@ -3,14 +3,22 @@
 import Promise from 'bluebird';
 import HelloStore from '../stores/HelloStore';
 
-const HelloAction = function(context,payload){
-    var store = context.getStore(HelloStore);
-    var deferred = Promise.pending();
+const PunctuationChanged = function(context,payload){
+    var deferred = new Promise.pending();
     setTimeout(function(){
-        context.dispatch(HelloStore.ACTIONS.HELLO, payload);
+        context.dispatch(HelloStore.ACTIONS.SET_PUNCTUATION, payload);
         deferred.resolve();
     }, 10);
     return deferred.promise;
 };
 
-export default HelloAction;
+const SalutationChanged = function(context,payload){
+    var deferred = new Promise.pending();
+    setTimeout(function(){
+        context.dispatch(HelloStore.ACTIONS.SET_SALUTATION, payload);
+        deferred.resolve();
+    }, 10);
+    return deferred.promise;
+};
+
+export default {PunctuationChanged,SalutationChanged};

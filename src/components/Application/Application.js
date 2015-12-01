@@ -9,8 +9,8 @@ import connectToStores from 'fluxible-addons-react/connectToStores';
 class Application extends React.Component{
     constructor(props,context){
         super(props,context);
-        console.log(this);
     }
+
     render() {
         return <HelloWorld/>
     }
