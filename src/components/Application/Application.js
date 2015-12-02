@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import HelloWorld from '../HelloWorld/HelloWorld.js';
 import Fluxible from 'fluxible';
-import provideContext from 'fluxible-addons-react/provideContext';
-import connectToStores from 'fluxible-addons-react/connectToStores';
+import {provideContext, connectToStores} from 'fluxible-addons-react';
 
 
 class Application extends React.Component{
@@ -15,6 +14,7 @@ class Application extends React.Component{
         return <HelloWorld/>
     }
 }
+
 Application.contextTypes = {
     getStore: React.PropTypes.func.isRequired,
     executeAction: React.PropTypes.func.isRequired

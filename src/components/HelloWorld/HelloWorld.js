@@ -6,8 +6,8 @@ import HelloAction  from "../../actions/HelloAction.js"
 import HelloStore   from "../../stores/HelloStore.js"
 
 import "./HelloWorld.scss";
-import connectToStores from 'fluxible-addons-react/connectToStores';
-import provideContext from 'fluxible-addons-react/provideContext';
+import {provideContext, connectToStores} from 'fluxible-addons-react';
+
 
 
 class HelloWorld extends React.Component {
